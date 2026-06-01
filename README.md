@@ -68,6 +68,34 @@ This configuration includes the following settings:
 - **JSX Single Quote**: false
 - **Vue Indent Script and Style**: true
 
+## Extending
+You can override specific rules by creating a .prettierrc.mjs
+```
+import config from "@flywen/prettier-config";
+export default {
+  ...config,
+  // Your overrides here
+  printWidth: 120,
+  singleQuote: true,
+};
+```
+
+## Editor Integration
+
+### VS code
+
+Install the Prettier extension (https://marketplace.visulastudio.com/items?itemName=esbenp.prettier-vscode) and add to your settings.
+
+```
+{
+  "prettier.configPath": "@flywen/prettier-config",
+  "editor.formatOnSave": true
+}
+```
+
+## Contributing
+Contributions are welcome! Please read the contributing guidelines (CONTRIBUTING.md) first.
+
 ## License
 
-MIT
+MIT (LICENSE) © flywen
