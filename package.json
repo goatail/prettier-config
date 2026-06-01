@@ -1,4 +1,4 @@
-﻿{
+{
   "name": "@flywen/prettier-config",
   "version": "1.0.0",
   "description": "Personal Prettier configuration for TypeScript projects",
@@ -19,7 +19,8 @@
     "build": "tsc",
     "prepublishOnly": "npm run build",
     "format": "prettier --write .",
-    "test": "echo \"No tests specified\" && exit 0"
+    "test": "echo \"No tests specified\" && exit 0",
+    "prepare": "husky"
   },
   "keywords": [
     "prettier",
@@ -41,14 +42,25 @@
   "homepage": "https://github.com/goatail/prettier-config#readme",
   "prettier": "@flywen/prettier-config",
   "devDependencies": {
+    "@commitlint/cli": "^21.0.2",
+    "@commitlint/config-conventional": "^21.0.2",
+    "@types/node": "^22.10.6",
+    "commitizen": "^4.3.1",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.0.7",
     "prettier": "^3.4.2",
-    "typescript": "^5.7.3",
-    "@types/node": "^22.10.6"
+    "typescript": "^5.7.3"
   },
   "peerDependencies": {
     "prettier": ">=3.0.0"
   },
   "engines": {
     "node": ">=18.0.0"
+  },
+  "lint-staged": {
+    "*.{ts,js,json,md}": [
+      "prettier --write"
+    ]
   }
 }
