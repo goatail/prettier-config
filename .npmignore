@@ -1,0 +1,7 @@
+﻿src/
+tsconfig.json
+README.md
+.npmignore
+.gitignore
+*.tgz
+coverage/

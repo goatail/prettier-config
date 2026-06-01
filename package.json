@@ -1,0 +1,54 @@
+﻿{
+  "name": "@flywen/prettier-config",
+  "version": "1.0.0",
+  "description": "Personal Prettier configuration for TypeScript projects",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
+    "format": "prettier --write .",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "keywords": [
+    "prettier",
+    "config",
+    "typescript",
+    "prettier-config",
+    "code-style",
+    "formatter"
+  ],
+  "author": "flywen",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/goatail/prettier-config.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gotail/prettier-config/issues"
+  },
+  "homepage": "https://github.com/goatail/prettier-config#readme",
+  "prettier": "@flywen/prettier-config",
+  "devDependencies": {
+    "prettier": "^3.4.2",
+    "typescript": "^5.7.3",
+    "@types/node": "^22.10.6"
+  },
+  "peerDependencies": {
+    "prettier": ">=3.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
